@@ -1,0 +1,182 @@
+body
+{
+    background: url("../images/9343.jpg") no-repeat center center;
+    background-size: cover;
+    direction: ltr;
+    font-size: 14px;
+    line-height: 1.4286;
+    margin: 0;
+    padding: 0;
+}
+
+.main
+{
+    width: 100%;
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+}
+.main:before
+{
+    flex-grow: 1;
+    content: '';
+    display: block;
+    height: 118px;
+}
+
+.main .form-main
+{
+    width:  450px;
+    height: auto;
+    min-height: 500px;
+    background-color: #fff;
+    position: relative;
+    margin: 0 auto;
+    text-align: left;
+    padding: 48px 40px 36px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+.main .form-main h2
+{
+    margin-bottom: 1rem;
+}
+
+.main .form-main form
+{
+
+    margin-top: 3rem;
+
+}
+.main .form-main form p
+{
+    color: #4285f4;
+    font-weight: 600;
+    width: 100%;
+    margin-bottom: 2rem;
+
+}
+.main .form-main form label
+{
+    color: #4285f4;
+    font-size: 13px;
+
+}
+.main .form-main form .btn
+{
+    background-color: #4285f4;
+
+    font-weight: 600;
+    color: #fff;
+}
+
+.main .form-main form input
+{
+    display: block;
+    width: 100%;
+    font-size: .9rem;
+    line-height: 1.6;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    padding: 7px 0;
+    border: 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.input-effect
+{
+    position: relative;
+}
+.input-label
+{
+    display: none;
+    margin-bottom: 0;
+}
+.effect ~ .focus-border{position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background-color: #4285f4; transition: 0.4s;}
+.effect:focus ~ .focus-border{width: 100%; transition: 0.4s; left: 0;}
+.effect:focus .input-label
+{
+    display: block;
+}
+
+.main .form-main .form-footer
+{
+    display: inline-block;
+    width: 100%;
+}
+
+.main .form-main .form-footer button
+{
+    float: right;
+    clear: both;
+}
+.main .form-main .form-footer button,.main .form-main .form-footer .icon
+{
+    display: inline-block;
+    cursor: pointer;
+}
+
+.fa-facebook-square
+{
+    color: #4a6bb1;
+}
+
+.main .form-main .create,.main .form-main .signIn
+{
+    top: 33px;
+    position: relative;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+
+.main .form-main .effect-parent-pass
+{
+   display: none;
+}
+
+
+a
+{
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: none;
+}
+
+@media (max-width: 575px) {
+    .main .form-main
+    {
+        width: 100%;
+
+        max-width: 100%;
+        height: 100vh;
+        padding: 24px 24px 36px
+    }
+    .main:before
+    {
+        height: 0;
+    }
+}
+
+.invalid
+{
+    border-color:#dc3545 !important;
+
+}
+
+.invalid-text
+{
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545 !important;
+}
+
+#send
+{
+    display: none;
+}
