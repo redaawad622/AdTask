@@ -15,8 +15,13 @@ Route::get('/','sessionController@getLogin');
 Route::get('/register', function () {
     return view('register');
 });
-Route::get('/lists', function () {
-    return view('lists');
+Route::resource('lists','ListsController');
+
+Route::prefix('lists')->group(function (){
+    Route::get('/{header}/{id}','ListsController@deleteItem');
+    Route::post('/addItem/{header}','ListsController@addItem');
+    Route::post('/edit/{header}/{id}','ListsController@editItem');
+
 });
 
 Route::post('/register','sessionController@register');

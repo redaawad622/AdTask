@@ -20,11 +20,16 @@
     @stack('styles')
 
     <link rel="stylesheet" href="{{asset('css/fontawesome-all.min.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+
+
 </head>
 <body>
 
 @yield('content')
 <script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset('js/sweetalert2.all.js')}}"></script>
+@include('sweet::alert')
 
 @stack('scripts')
 
