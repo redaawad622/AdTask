@@ -8,7 +8,7 @@
 
            <div class="amazing_list">
                <div class="row">
-                   @foreach($list_items as $list_item)
+                   @foreach($list_head->lists as $list_item)
                        <div  class="col-sm-6 {{$list_item->id}} ">
                            <p>{{$list_item->item}}</p>
 

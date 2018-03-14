@@ -53,6 +53,8 @@ $('#check').click(function () {
                 $('#emailHelp').addClass('invalid-text');
                 $('#emailHelp').html('this email is not exist !!');
                 $('#email').val('');
+                swal("warning", "this email is not exist !!", "warning");
+
 
             }
         }

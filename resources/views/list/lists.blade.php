@@ -10,7 +10,7 @@
             <h3>{{$head->header}}</h3>
             <span>{{date('M ,j Y',strtotime($head->date))}}</span>
             <ul>
-                @foreach($lists as $list)
+                @foreach($head->lists as $list)
                     @if($list->header_id==$head->id)
                         <li>{{$list->item}}</li>
 

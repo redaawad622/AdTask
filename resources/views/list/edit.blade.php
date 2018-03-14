@@ -6,7 +6,7 @@
             <form action="/lists/{{$header->id}}" method="post" id="create_list">
                 {{csrf_field()}}
                 @method('PUT')
-                <input type="hidden"  name="counter" value="{{count($lists)}}">
+                <input type="hidden"  name="counter" value="{{count($header->lists)}}">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label class="label-icon"><i class="fas fa-heading"></i></label>
@@ -16,7 +16,7 @@
                         <input type="date" class="form-control" name="date" value="{{$header->date}}"  placeholder="date" required>
                     </div>
                 </div>
-                @foreach($lists as $key=>$list)
+                @foreach($header->lists as $key=>$list)
                 <div class="form-group">
                     <label class="label-icon"><i class="fas fa-list-ul"></i></label>
                     <input type="text" value="{{$list->item}}" class="form-control" name="item_value{{$key}}" placeholder="add item" required>

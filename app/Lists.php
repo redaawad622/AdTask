@@ -6,8 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Lists extends Model
 {
+    protected $fillable = [
+        'item', 'header_id',
+    ];
     public function listHeader()
     {
-        $this->hasOne(listHeader::class);
+       return $this->belongsTo('App\listHeader','header_id');
     }
 }

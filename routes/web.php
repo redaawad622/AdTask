@@ -35,3 +35,4 @@ Route::prefix('login')->group(function (){
     Route::get('/github', 'SocialAuthGithubController@redirect');
     Route::get('/githubCallback', 'SocialAuthGithubController@callback');
 });
+

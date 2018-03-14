@@ -34,8 +34,6 @@ class sessionController extends Controller
     public function register(StoreRegisterData $request)
     {
 
-
-
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
@@ -51,11 +49,9 @@ class sessionController extends Controller
             $account->user_id=$user->id;
             $account->save();
 
-
-
         }
         auth()->login($user);
-        return view('lists');
+        return redirect('/lists');
     }
 
     public function destroy()
@@ -88,8 +84,8 @@ class sessionController extends Controller
     public function login()
     {
         if (Auth::attempt(['email' => $this->request->input('email'), 'password' => $this->request->input('password')])) {
-            return redirect('/lists');
+            return redirect()->to('/lists');
         }
-        return redirect()->back()->with('err', 'the password is noy correct !!!')->withInput();
+        return redirect()->back()->with('error', 'the password is noy correct !!!')->withInput();
     }
 }

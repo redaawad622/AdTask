@@ -18,9 +18,9 @@ class ListsController extends Controller
      */
     public function index()
     {
-        $lists=Lists::all();
+
         $headers=listHeader::all();
-        return view('list.lists',compact('lists','headers'));
+        return view('list.lists',compact('headers'));
     }
 
     /**
@@ -74,8 +74,8 @@ class ListsController extends Controller
     public function show($id)
     {
         $list_head=listHeader::find($id);
-        $list_items=Lists::where('header_id',$id)->get();
-        return view('list.show',compact('list_head','list_items'));
+
+        return view('list.show',compact('list_head'));
 
     }
 
@@ -88,7 +88,6 @@ class ListsController extends Controller
     public function edit($id)
     {
         $header=listHeader::find($id);
-        $lists=Lists::where('header_id',$id)->get();
         return view('list.edit',compact('header','lists'));
     }
 

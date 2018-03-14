@@ -9,8 +9,9 @@
 
             <form action="/register" method="post">
                 {{csrf_field()}}
+
                 <input type="hidden" name="provider_user_id" value="{{old('provider_user_id')}}  @isset($provider_user_id) {{$provider_user_id}} @endisset">
-                <input type="hidden" name="provider" value="{{old('provider)}}  @isset($provider) {{$provider}} @endisset">
+                <input type="hidden" name="provider" value="{{old('provider')}}  @isset($provider) {{$provider}} @endisset" >
 
                 <div class="form-group">
                     <div class="input-effect">
@@ -18,9 +19,9 @@
                         <span class="focus-border"></span>
                     </div>
 
-                        @foreach ($errors->get('name') as $message)
-                           <small  class="form-text text-muted invalid-text"> {{$message}}.</small>
-                        @endforeach
+                    @foreach ($errors->get('name') as $message)
+                        <small  class="form-text text-muted invalid-text"> {{$message}}.</small>
+                    @endforeach
 
                 </div>
                 <div class="form-group effect-parent-email">
